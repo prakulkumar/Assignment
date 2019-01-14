@@ -8,3 +8,13 @@ $color-black: black;
 $color-white: #FEFFFE;
 
 $color-text-grey: #666666;
+
+@mixin change($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 375px){ @content };
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 768px){ @content };
+    }
+}

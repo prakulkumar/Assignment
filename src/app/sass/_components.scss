@@ -93,6 +93,72 @@
     &:nth-child(2) &__icon {
         visibility: visible;
     }
+
+
+    @include change(tab-port) {
+        &:first-child {
+            margin-top: 1.4rem;
+        }
+    
+        &:not(:last-child) &__box {
+            margin: 0 6.2rem 6.2rem 5rem;
+        }
+    
+        &:last-child &__box &__text {
+            margin-left: 0;
+            padding: 0;
+            opacity: .2;
+        }
+    
+        &__box {
+            width: 12rem;
+            height: 12rem;
+            margin: 0 6.2rem 0 5rem;
+        }
+    
+        &__text {
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 1.6rem;
+            margin-left: 0;
+        }
+    
+        &__heading {
+            font-size: 1.1rem;
+        }
+    
+        &__subheading {
+            display: none;
+        }
+    
+        &__image {
+            top: -3rem;
+            left: 4rem;
+        }
+    
+        &:nth-child(2) &__box {
+            width: 12rem;
+            height: 12rem;
+            margin: 0 6.2rem 7.3rem 5rem;
+            visibility: hidden;
+        }
+    
+        &:nth-child(2) &__image {
+            position: absolute;
+            top: -2rem;
+            left: 8.4rem;
+        }
+    
+        &:nth-child(2) &__box &__text {
+            align-items: flex-start;
+            margin-left: 4rem;
+        }
+    
+        &__icon {
+            left: 22.4rem;
+            top: 9.6rem;
+        }
+    }
 }
 
 
@@ -101,9 +167,19 @@
     justify-content: space-between;
     margin: 8.3rem 11.8rem 7.3rem 11.8rem;
 
+    @include change(tab-port) {
+        margin: 8.3rem 7rem 7.3rem 7rem;
+    }
+
+    @include change(phone) {
+        margin: 8rem 3rem 7.3rem -9rem;
+        position: relative;
+        z-index: 1;
+    }
+
     &__text {
         font-family: "Monserrat-Bold", Fallback, sans-serif;
-        font-size: 4.8rem;
+        font-size: 48px;
         text-transform: uppercase;
         letter-spacing: .84rem;
     }
@@ -115,6 +191,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include change(phone) {
+            width: 3rem;
+            height: 3rem;
+            margin-top: -4.7rem;
+            background: transparent;
+        }
     }
 }
 
@@ -122,10 +205,17 @@
     display: flex;
     justify-content: space-between;
     margin: 8.3rem 11.8rem 6.6rem 11.8rem;
+    @include change(tab-port) {
+        margin: 8.3rem 7rem 7.3rem 7rem;
+    }
+
+    @include change(phone) {
+        margin: 8.3rem 3rem 7.3rem 4rem;
+    }
 
     &__text {
         font-family: "Monserrat-Bold", Fallback, sans-serif;
-        font-size: 3.2rem;
+        font-size: 32px;
         text-transform: uppercase;
         letter-spacing: .512rem;
         text-shadow: 0 2rem 2.5rem rgba($color-black, 0.15);
@@ -138,6 +228,11 @@
         box-shadow: 0 1.2rem 1.2rem 0 rgba($color-black, 0.15);
         border-radius: 6rem;
         position: relative;
+
+        @include change(phone) {
+            margin-top: -3rem;
+            width: 6.2rem;
+        }
     }
 
     &__box::after {
@@ -157,6 +252,13 @@
     display: flex;
     justify-content: space-between;
     margin: 0 11.8rem;
+    @include change(tab-port) {
+        margin: 0 7rem;
+    }
+
+    @include change(phone) {
+        margin: 0 3rem 0 4rem;
+    }
 
     &__text {
         font-family: "Monserrat-Bold", Fallback, sans-serif;
@@ -179,11 +281,28 @@
     margin: 0 12rem;
     justify-content: space-between;
 
+    @include change(tab-port) {
+        margin: 0 5rem;
+    }
+
+    @include change(phone) {
+        margin: 4.9rem 3rem 1.8rem 4rem;
+        width: 218px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 14rem;
+    }
+
     &__box {
         width: 3.2rem;
         height: 3.2rem;
         box-shadow: 0 1rem 1rem 0 rgba($color-black, 0.15);
         margin: 4.9rem 0 7.8rem 0;
+
+        @include change(phone) {
+            margin: 0;
+            margin-left: 3rem;
+        }
     }
 
     &__box--1 {
@@ -225,6 +344,14 @@
         display: flex;
         margin: 4rem 12rem 0 12rem;
         justify-content: space-between;
+
+        @include change(tab-port) {
+            margin: 4rem 7rem 0 7rem;
+        }
+
+        @include change(phone) {
+            margin: 4rem 3rem 0 4rem;
+        }
     }
 
     &__container--big {
@@ -248,6 +375,10 @@
         display: flex;
         align-items: center;
         flex: 0 0 35%;
+
+        @include change(phone) {
+            margin-left: 1rem;
+        }
     }
 
     &__icon--1 {
@@ -271,6 +402,10 @@
         opacity: 0.6;
         font-size: 1.8rem;
         letter-spacing: 0.056rem;
+
+        @include change(phone) {
+            display: none;
+        }
     }
 
     &__container--big > &__item2 {
@@ -288,18 +423,19 @@
     height: 15.1rem;
     margin: 3rem 0 0 10.3rem;
     position: relative;
+
+    @include change(tab-port) {
+        margin: 4rem 0 0 4.5rem;
+    }
+
+    @include change(phone) {
+        width: 19.8rem;
+        height: 9.85rem;
+        margin: 4rem 3rem 0 4.5rem;
+    }
     
     &__block {
-        // width: 26rem;
-        // height: 13rem;
         margin: 2rem;
-
-        // border-top-left-radius: 26rem;
-        // border-top-right-radius: 26rem;
-
-        // border-top: 1rem solid #979797;
-        // border-bottom: 0;
-
         height:13rem;
         width:26rem;
         border-radius: 26rem 26rem 0 0;
@@ -311,24 +447,12 @@
         align-items: flex-end;
 
         position: relative;
+
+        @include change(phone) {
+            width: 15.5rem;
+            height: 7.75rem;
+        }
     }
-
-    // &__block::after {
-    //     content: "";
-    //     position: absolute;
-    //     height: 12.5rem;
-    //     width: 12rem;
-    //     border-radius: 26rem 0 0 0;
-    //     border: 10px solid transparent;
-    //     border-bottom: 0;
-    //     border-right: transparent;
-    //     top: -5px;
-    //     left: -5px;
-
-    //     // border-image: linear-gradient($color-primary 0%, $color-secoundary  100%);
-    //     // border-image-slice: 40;
-    //     // border-image-width: 10px;
-    // }
 
     &__block::before {
         content: "";
@@ -339,6 +463,7 @@
         border-radius: 50%;
         background-image: linear-gradient(135deg, $color-primary 0%, $color-secoundary  100%);
         top: -1.3rem;
+        z-index: 1;
     }
 
     &__text {
@@ -346,22 +471,42 @@
         font-size: 4rem;
         letter-spacing: .64rem;
         text-shadow: 0 2rem 2.5rem rgba($color-black, 0.15);
+        z-index: 1;
     }
 
     &__border {
-        background-image: linear-gradient(135deg, $color-primary 0%, $color-secoundary  100%);
+        background-image: linear-gradient(to right, $color-primary 0%, $color-secoundary  100%);
         height:13rem;
         width:14rem;
         border-radius: 26rem 0 0 0;
 
         position: absolute;
         top: 0;
+
+        @include change(phone) {
+            height: 8rem;
+            width: 9rem;
+        }
     }
 
     &__border--block {
-        height:11rem;
-        width:12rem;
+        height: 13rem;
+        width: 14rem;
         border-radius: 26rem 0 0 0;
-        background-color: $color-white;
+        background-color: #FEFFFE;
+        margin: 6px;
+
+        @include change(phone) {
+            height: 8rem;
+            width: 9rem;
+        }
     }
+}
+
+.back__icon{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 3.3rem;
+    left: 2rem;
 }

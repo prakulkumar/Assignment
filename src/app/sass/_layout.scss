@@ -1,15 +1,28 @@
 .layout {
     min-height: 100vh;
     display: flex;
+    position: relative;
 
     &__sidebar {
         height: 100%;
         flex: 0 0 38rem;
         background-image: linear-gradient(-180deg, $color-primary 0%, $color-secoundary 100%);
+
+        @include change(tab-port) {
+            flex: 0 0 21rem;
+        }
+
+        @include change(phone) {
+            flex: 0 0 15rem;
+        }
     }
 
     &__container {
         height: 100%;
         flex: 1;
+
+        @include change(phone) {
+            flex: 0 0 22.5rem;
+        }
     }
 }
