@@ -1,3 +1,5 @@
+// Sidebar Styling
+
 .block {
 
     &:first-child {
@@ -162,6 +164,8 @@
 }
 
 
+// Main Heading Styling
+
 .heading {
     display: flex;
     justify-content: space-between;
@@ -200,6 +204,8 @@
         }
     }
 }
+
+// SubHeading Styling
 
 .subheading {
     display: flex;
@@ -248,6 +254,8 @@
     }
 }
 
+// Divider Styling
+
 .divider {
     display: flex;
     justify-content: space-between;
@@ -276,6 +284,8 @@
     }
 }
 
+// Shades Styling
+
 .shades {
     display: flex;
     margin: 0 12rem;
@@ -286,7 +296,7 @@
     }
 
     @include change(phone) {
-        margin: 4.9rem 3rem 1.8rem 4rem;
+        margin: 4.9rem 3rem 1.8rem 1rem;
         width: 218px;
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -301,7 +311,7 @@
 
         @include change(phone) {
             margin: 0;
-            margin-left: 3rem;
+            margin-left: 4rem;
         }
     }
 
@@ -334,6 +344,8 @@
         background-color: #C791CD;
     }
 }
+
+// Modes Styling
 
 .mode {
     display: flex;
@@ -417,6 +429,8 @@
         color: $color-white;
     }
 }
+
+// Intensity Styling
 
 .arc {
     width: 30rem;
@@ -502,6 +516,8 @@
         }
     }
 }
+
+// Back Icon
 
 .back__icon{
     width: 3rem;
