@@ -282,3 +282,86 @@
         color: $color-white;
     }
 }
+
+.arc {
+    width: 30rem;
+    height: 15.1rem;
+    margin: 3rem 0 0 10.3rem;
+    position: relative;
+    
+    &__block {
+        // width: 26rem;
+        // height: 13rem;
+        margin: 2rem;
+
+        // border-top-left-radius: 26rem;
+        // border-top-right-radius: 26rem;
+
+        // border-top: 1rem solid #979797;
+        // border-bottom: 0;
+
+        height:13rem;
+        width:26rem;
+        border-radius: 26rem 26rem 0 0;
+        border:2px solid rgba(#979797, .6);
+        border-bottom: 0;
+        
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        position: relative;
+    }
+
+    // &__block::after {
+    //     content: "";
+    //     position: absolute;
+    //     height: 12.5rem;
+    //     width: 12rem;
+    //     border-radius: 26rem 0 0 0;
+    //     border: 10px solid transparent;
+    //     border-bottom: 0;
+    //     border-right: transparent;
+    //     top: -5px;
+    //     left: -5px;
+
+    //     // border-image: linear-gradient($color-primary 0%, $color-secoundary  100%);
+    //     // border-image-slice: 40;
+    //     // border-image-width: 10px;
+    // }
+
+    &__block::before {
+        content: "";
+        position: absolute;
+
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+        background-image: linear-gradient(135deg, $color-primary 0%, $color-secoundary  100%);
+        top: -1.3rem;
+    }
+
+    &__text {
+        font-family: "Monserrat-Bold", Fallback, sans-serif;
+        font-size: 4rem;
+        letter-spacing: .64rem;
+        text-shadow: 0 2rem 2.5rem rgba($color-black, 0.15);
+    }
+
+    &__border {
+        background-image: linear-gradient(135deg, $color-primary 0%, $color-secoundary  100%);
+        height:13rem;
+        width:14rem;
+        border-radius: 26rem 0 0 0;
+
+        position: absolute;
+        top: 0;
+    }
+
+    &__border--block {
+        height:11rem;
+        width:12rem;
+        border-radius: 26rem 0 0 0;
+        background-color: $color-white;
+    }
+}
