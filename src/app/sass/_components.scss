@@ -1,0 +1,284 @@
+.block {
+
+    &:first-child {
+        margin-top: 1rem;
+        opacity: .2;
+    }
+
+    &:not(:last-child) &__box {
+        margin: 0 3.7rem 5rem 14rem;
+        background: $color-white;
+    }
+
+    &:last-child &__box &__text {
+        margin-left: 0;
+        padding-left: 5rem;
+        background-image: linear-gradient(to bottom, $color-white, transparent);
+    }
+
+    position: relative;
+    
+    &__box {
+        width: 20.3rem;
+        height: 12rem;
+        box-shadow: 0 2.1rem 2.1rem 0 rgba($color-black, 0.15);
+        margin: 0 3.7rem 1rem 14rem;
+    }
+
+    &__text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-left: 5rem;
+    }
+
+    &__heading {
+        margin-bottom: 1rem;
+        letter-spacing: .2rem;
+        font-family: "Monserrat-Bold", Fallback, sans-serif;
+        text-transform: uppercase;
+    }
+
+    &__subheading {
+        font-size: 1.5rem;
+        color: $color-text-grey;
+        letter-spacing: 0.47px;
+        line-height: 1.9rem;
+        opacity: 0.5;
+    }
+
+    &__image {
+        position: absolute;
+        top: -1rem;
+        left: 4rem;
+    }
+
+    &:nth-child(2) &__box {
+        width: 23.3rem;
+        height: 14rem;
+        box-shadow: 0 2.1rem 2.1rem 0 rgba($color-black, 0.15);
+        margin: 0 0 5rem 4rem;
+        position: relative;
+    }
+
+    &:nth-child(2) &__image {
+        position: absolute;
+        top: -2rem;
+        left: 22.7rem;
+    }
+
+    &:nth-child(2) &__box &__text {
+        align-items: flex-start;
+        margin-left: 4rem;
+    }
+
+    &__icon {
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 37.4rem;
+        bottom: 0;
+        background-image: linear-gradient(135deg, $color-primary-2, $color-secoundary-2);
+        box-shadow: 0 25px 25px 0 rgba($color-black, 0.15);
+        visibility: hidden;
+    }
+
+    &:nth-child(2) &__icon {
+        visibility: visible;
+    }
+}
+
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 8.3rem 11.8rem 7.3rem 11.8rem;
+
+    &__text {
+        font-family: "Monserrat-Bold", Fallback, sans-serif;
+        font-size: 4.8rem;
+        text-transform: uppercase;
+        letter-spacing: .84rem;
+    }
+
+    &__box {
+        width: 5.6rem;
+        height: 5.6rem;
+        background-image: linear-gradient(135deg, $color-primary-2, $color-secoundary-2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.subheading {
+    display: flex;
+    justify-content: space-between;
+    margin: 8.3rem 11.8rem 6.6rem 11.8rem;
+
+    &__text {
+        font-family: "Monserrat-Bold", Fallback, sans-serif;
+        font-size: 3.2rem;
+        text-transform: uppercase;
+        letter-spacing: .512rem;
+        text-shadow: 0 2rem 2.5rem rgba($color-black, 0.15);
+    }
+
+    &__box {
+        width: 4.2rem;
+        height: 2.4rem;
+        background-color: $color-black;
+        box-shadow: 0 1.2rem 1.2rem 0 rgba($color-black, 0.15);
+        border-radius: 6rem;
+        position: relative;
+    }
+
+    &__box::after {
+        content: "";
+        position: absolute;
+        width: 1.4rem;
+        height: 1.4rem;
+        background-color: $color-white;
+        border-radius: 50%;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.divider {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 11.8rem;
+
+    &__text {
+        font-family: "Monserrat-Bold", Fallback, sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: .15rem;
+        color: $color-primary;
+        margin-right: 1.4rem;
+    }
+
+    &__dash {
+        flex: 1;
+        border-top: 1px dashed $color-primary;
+        margin: auto;
+    }
+}
+
+.shades {
+    display: flex;
+    margin: 0 12rem;
+    justify-content: space-between;
+
+    &__box {
+        width: 3.2rem;
+        height: 3.2rem;
+        box-shadow: 0 1rem 1rem 0 rgba($color-black, 0.15);
+        margin: 4.9rem 0 7.8rem 0;
+    }
+
+    &__box--1 {
+        background-color: #FF4563;
+        transform: scale(1.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__icon--tick {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+    }
+
+    &__box--2 {
+        background-color: #8245E6;
+    }
+
+    &__box--3 {
+        background-color: #4AC0E0;
+    }
+
+    &__box--4 {
+        background-color: #1089EB;
+    }
+
+    &__box--5 {
+        background-color: #C791CD;
+    }
+}
+
+.mode {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7rem;
+
+    &__container {
+        display: flex;
+        margin: 4rem 12rem 0 12rem;
+        justify-content: space-between;
+    }
+
+    &__container--big {
+        position: relative;
+        margin-top: 4.8rem;
+    }
+
+    &__container--big::after {
+        content: "";
+        position: absolute;
+        width: 105%;
+        height: 5.6rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: linear-gradient(135deg, $color-primary 0%, $color-secoundary  100%);
+        z-index: -10;
+    }
+
+    &__item1 {
+        display: flex;
+        align-items: center;
+        flex: 0 0 35%;
+    }
+
+    &__icon--1 {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: 2.3rem;
+    }
+
+    &__icon--2 {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-right: 1rem;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        letter-spacing: 0.056rem;
+    }
+
+    &__item2 {
+        opacity: 0.6;
+        font-size: 1.8rem;
+        letter-spacing: 0.056rem;
+    }
+
+    &__container--big > &__item2 {
+        color: $color-white;
+        opacity: 1;
+    }
+
+    &__container--big &__item1 > &__text {
+        color: $color-white;
+    }
+}

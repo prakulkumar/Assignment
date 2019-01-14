@@ -1,4 +1,85 @@
 <div class="layout">
-  <div class="layout__sidebar"></div>
-  <main class="layout__container"></main>
+  <div class="layout__sidebar">
+    <section class="block" *ngFor="let item of block">
+      <div class="block__box">
+        <div class="block__text">
+          <div class="block__heading">{{item.heading}}</div>
+          <div class="block__subheading">{{item.subheading}}</div>
+        </div>
+      </div>
+      <img src="{{item.imageUrl}}" alt="blockImage" class="block__image">
+      <div class="block__icon">
+        <img src="assets/chevron-right.png" alt="blockIcon" class="block__icon--tick">
+      </div>
+    </section>
+  </div>
+  <main class="layout__container">
+    <div class="heading">
+      <div class="heading__text">Devices</div>
+      <div class="heading__box">
+        <img src="assets/plus-dk.png" alt="blockIcon" class="block__icon--tick">
+      </div>
+    </div>
+
+    <div class="subheading">
+      <div class="subheading__text">Bed Lamp</div>
+      <div class="subheading__box"></div>
+    </div>
+
+    <div class="divider">
+      <div class="divider__text">Shades</div>
+      <div class="divider__dash"></div>
+    </div>
+
+    <div class="shades">
+      <div class="shades__box shades__box--1">
+        <img src="assets/tick-wh.png" alt="blockIcon" class="shades__box--1__icon--tick">
+      </div>
+      <div class="shades__box shades__box--2"></div>
+      <div class="shades__box shades__box--3"></div>
+      <div class="shades__box shades__box--4"></div>
+      <div class="shades__box shades__box--5"></div>
+    </div>
+
+    <div class="divider">
+      <div class="divider__text">Modes</div>
+      <div class="divider__dash"></div>
+    </div>
+
+    <div class="mode">
+      <div class="mode__container mode__container--big">
+        <div class="mode__item1">
+          <img src="assets/morning-wh.png" alt="blockIcon" class="mode__icon--1">
+          <div class="mode__text">Morning</div>
+        </div>
+        <div class="mode__item2">50%</div>
+        <img src="assets/tick-wh.png" alt="blockIcon" class="mode__icon--2">
+      </div>
+
+      <div class="mode__container">
+        <div class="mode__item1">
+          <img src="assets/day-dk.png" alt="blockIcon" class="mode__icon--1">
+          <div class="mode__text">Day</div>
+        </div>
+        <div class="mode__item2">30%</div>
+        <img src="assets/tick-wh-lt.png" alt="blockIcon" class="mode__icon--2">
+      </div>
+
+      <div class="mode__container">
+        <div class="mode__item1">
+          <img src="assets/night-dk.png" alt="blockIcon" class="mode__icon--1">
+          <div class="mode__text">Night</div>
+        </div>
+        <div class="mode__item2">30%</div>
+        <img src="assets/tick-wh-lt.png" alt="blockIcon" class="mode__icon--2">
+      </div>
+    </div>
+
+    <div class="divider">
+      <div class="divider__text">Intensity</div>
+      <div class="divider__dash"></div>
+    </div>
+
+    <div class="arc"></div>
+  </main>
 </div>
